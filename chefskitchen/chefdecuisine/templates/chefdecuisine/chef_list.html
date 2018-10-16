@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+
+	<style>
+		body {
+            background-color: PaleVioletRed;
+        	font-family: "Trebuchet MS", Helvetica, sans-serif;
+        }
+	</style>
+
+	<head>
+		<meta charset = "utf-8@/">
+		<title>List of Chefs</title>	
+	</head>
+
+	<body>
+		<h2 style="font-size: 36px"> List of Chefs:</h2>
+
+		<ul>
+			{% for chef in souschef %}
+			<li style="font-size: 20px">{{chef.first_name}} {{chef.last_name}}</li>
+			{% endfor %}
+		</ul>
+	</body>
+    
+</html>
