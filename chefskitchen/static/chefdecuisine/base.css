@@ -1,0 +1,40 @@
+
+body {
+	background: url("image/68814732-chef-toques-seamless-background-wallpaper-with-vector-pattern-icons-of-restaurant-cook-caps-pencil-s.jpg");
+	background-repeat: repeat;
+	background-color: paleturquoise;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    background-color: white;
+    border: 4px solid black;
+
+}
+    
+ul {
+    font-size: 20px;
+    background-color: white;
+    border: 4px solid black;
+
+}
+
+
+li {
+    font-size: 25px;
+
+}
+
+    
+
+div.souschef-detail {
+	font-size: 20px;
+	text-align: center;
+	background-color: white;
+	border: 4px solid black;
+}
+
+

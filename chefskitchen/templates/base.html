@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" type="text/css" href="{% static "chefdecuisine/base.css" %}">
+	</head>
+
+	<body>
+        <div id="heading">
+            <H1>Welcome, Chef!</H1>
+        </div>
+        
+		<div id="navigationBar">
+			Code for navigation bar here. Need to add home page, user list, etc.
+		</div>
+
+		<div id="pageContent">
+			{% block content %}
+			Placeholder for page content
+			{% endblock %}
+		</div>
+	</body>
+</html>
+

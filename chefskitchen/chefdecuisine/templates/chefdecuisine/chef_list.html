@@ -1,29 +1,12 @@
-<!doctype html>
-<html>
+{% extends "base.html" %}
 
+{% block content %}
 
-	<style>
-		body {
-            background: url("https://us.123rf.com/450wm/seamartini/seamartini1612/seamartini161200117/68814732-chef-toques-seamless-background-wallpaper-with-vector-pattern-icons-of-restaurant-cook-caps-pencil-s.jpg?ver=6");
-			background-repeat: repeat;
-            background-color: PaleVioletRed;
-        	font-family: "Trebuchet MS", Helvetica, sans-serif;
-        }
-	</style>
+<h2> List of Chefs:</h2>
+	<ul>
+		{% for chef in souschef %}
+		<li>{{chef.first_name}} {{chef.last_name}}</li>
+		{% endfor %}
+	</ul>
 
-	<head>
-		<meta charset = "utf-8@/">
-		<title>List of Chefs</title>	
-	</head>
-
-	<body>
-		<h2 style="font-size: 36px text-align: center; background-color: white; border: 4px solid black;"> List of Chefs:</h2>
-
-		<ul style="font-size: 20px; background-color: white; border: 4px solid black;">
-			{% for chef in souschef %}
-			<li style="font-size: 25px">{{chef.first_name}} {{chef.last_name}}</li>
-			{% endfor %}
-		</ul>
-	</body>
-    
-</html>
+{% endblock %}
