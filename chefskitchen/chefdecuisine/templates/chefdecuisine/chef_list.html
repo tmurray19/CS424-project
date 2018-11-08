@@ -5,7 +5,11 @@
 <h2> List of Chefs:</h2>
 	<ul>
 		{% for chef in souschef %}
-		<li>{{chef.first_name}} {{chef.last_name}}</li>
+		<li>
+			<a href = "{% url 'souschef_profile' souschef_id=chef.id %}" >
+				{{chef.first_name}} {{chef.last_name}}
+			</a>
+		</li>
 		{% endfor %}
 	</ul>
 
