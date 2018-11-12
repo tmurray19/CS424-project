@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Home{% endblock %}
+
+{%block content %}
+
+	{% if user.is_authenticated %}
+		<div class = 'box'>
+			<p>
+				Welcome, chef {{ user.username }}!
+			</p>
+		</div>
+	{% else %}
+		<div class = 'box'>	
+			<p>
+				Please sign in, chef!
+		       	</p>
+		</div>	
+			<a class = 'button' href ="{% url 'login' %}">
+				Login Here
+			</a>
+	{% endif %}	
+
+
+{% endblock %}

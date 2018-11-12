@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='box'>
+	<form method="post" action="">
+
+		{{ form.as_ul }}
+
+		<input type="submit" value="Update information">
+
+		{% csrf_token %}
+
+	</form>
+</div>
+
+
+{% endblock %}

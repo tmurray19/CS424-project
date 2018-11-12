@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--- users and passwords used for testing:
+	jdoe: jdoepassword
+	chefgirl: cooking1scool
+-->
+
+
+<div class="box">
+	<form method="POST" action="{% url 'login' %}">
+		
+		{% csrf_token %}
+		
+		{{ form.as_p }}
+		
+		<button type="submit">Login</button>
+	
+	</form>
+
+</div>
+
+{% endblock %}
