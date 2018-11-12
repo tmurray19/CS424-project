@@ -125,8 +125,14 @@ STATICFILES_DIRS = (
 
         )
 
+# For finding static files in other places
 STATICFILES_FINDER = [
         'django.contrib.staticfiles.finders.FileSystemFinder',
         'django.contrib.staticfiles.finders.AppDirectoriesFinder',
         ]
 
+# Creating a login url to allow users to make accounts
+LOGIN_URL = '/accounts/login/'
+
+
+LOGIN_REDIRECT_URL = '/'
