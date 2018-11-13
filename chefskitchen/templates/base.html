@@ -9,15 +9,15 @@
 	</head>
 
 	<body>
-
-		<div id="heading" class="box">
-		      	<H1>Welcome, Chef!</H1>
-	       	</div>
-	       
-		<p></p>
 	
 		<div id="navigationBar" class="box">
-			Code for navigation bar here. Need to add home page, user list, etc.
+			<a class = "buttonRegular" href = {% url 'home' %}>Homepage</a>
+			{% if user.is_authenticated %}
+				<a class="buttonRegular" href = {% url 'souschef_list' %}>Chef List</a>	
+				<a class="buttonRegular" href = {% url 'logout' %}>Logout</a>	
+			{% else %}
+				<a class="buttonRegular" href = {% url 'login' %}>Login</a>
+			{% endif %}
 		</div>
 
 		<p></p>

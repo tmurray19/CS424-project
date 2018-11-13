@@ -19,6 +19,9 @@ from chefdecuisine.forms import chefForm
 # To check if a user is logged in
 from django.contrib.auth.decorators import login_required
 
+# User authentication
+from django.contrib.auth import authenticate
+
 # Detail view for the sousChef model
 def souschef(request, souschef_id):
     souschef = sousChef.objects.get(id = souschef_id)
@@ -51,8 +54,9 @@ def souschef_update(request, souschef_id):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse('souschef_profile', kwargs={'souschef_id':souschef_id}))
+            # return HttpResponseRedirect(request.POST.get('next'))
         else:
-            return HttpResponseRedirect("/")
+            return HttpResponseRedirect('/')
     
     
     form = chefForm(instance = souschef)
