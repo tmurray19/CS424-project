@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 from django.contrib.auth.models import User
 
@@ -18,6 +19,5 @@ class sousChef(models.Model):
 
     date_of_birth = models.DateField(null = True, blank = True)
 
-    owner = models.ForeignKey(User, null=True,  on_delete = models.CASCADE)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, null=True,  on_delete = models.SET_NULL)
 
-    # exclude['owner']
