@@ -19,11 +19,12 @@ class sousChef(models.Model):
 
     date_of_birth = models.DateField(null = True, blank = True)
 
-
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, null = True, on_delete  = models.CASCADE, related_name = 'owner')
 
 # User account to link to each sousChef 
 
 class userAcc(models.Model):
     username = models.CharField(max_length = 100)
 
-    chef_acc = models.ForeignKey(sousChef, null=True, on_delete = models.CASCADE, related_name='owner')
+
+    #chef_acc = models.ForeignKey(sousChef, null=True, on_delete = models.CASCADE, related_name='owner')
