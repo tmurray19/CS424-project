@@ -3,16 +3,18 @@
 {% block title %}Update info {% endblock %}
 
 {% block content %}
+
+
 <div class='box'>
+	{% if User == sousChef.owner  %}
 	<form method="post" action="">
-
 		{{ form.as_ul }}
-
 		<input type="submit" value="Update information">
-
 		{% csrf_token %}
-
 	</form>
+	{% else %}
+		<p>Sorry, you don't have permission to edit this information.</p>
+	{% endif %}
 </div>
 
 
